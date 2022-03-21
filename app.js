@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req,res)=>{
-    res.send('I love Nina, and emi, and food')
+    res.send('PWN THE NOOBS, For Breakfast lunch and dinner!')
 } );
 
 
