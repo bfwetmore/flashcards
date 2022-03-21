@@ -8,4 +8,4 @@ app.get('/', (req,res)=>{
 
 
 console.log("Server successfully started")
-//app.listen(3000);
+app.listen(3000);
