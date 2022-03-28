@@ -1,11 +1,23 @@
 const express = require('express');
 
 const app = express();
-
-app.get('/', (req,res)=>{
-    res.send('PWN THE NOOBS, For Breakfast lunch and dinner!')
-} );
+app.set('view engine', 'pug');
 
 
-console.log("Server successfully started")
-app.listen(process.env.PORT || 3000);
+
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
+app.get('/cards', (req, res) => {
+    res.render('card', {prompt: "Who is buried in Grants tomb?"});
+});
+
+app.get('/hello', (req, res) => {
+    res.render('hello');
+});
+
+console.log("Server successfully started");
+app.listen(process.env.PORT || 3000, () => {
+    console.log('The application is running on localhost:3000');
+});
